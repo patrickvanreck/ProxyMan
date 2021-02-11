@@ -2,46 +2,38 @@
 
 ### Configuring proxy made so simple on Linux ([releases](https://github.com/himanshub16/ProxyMan/releases/))
 
-(Download [here](https://github.com/himanshub16/ProxyMan/releases/latest/))
 
-#### Usage :
-* Download the [zip from here](https://github.com/himanshub16/ProxyMan/releases/latest).
-* Extract the zip, open the folder in terminal.
-* Enter the following command
-`
-bash main.sh
-`
+v3 is ready with new features, necessary improvements, updates, restructured code and much better experience. :tada: 
 
-![Screenshot](https://raw.githubusercontent.com/himanshub16/ProxyMan/master/screenshot.png)
+## How to use it
+[![asciicast](https://asciinema.org/a/CVha4PPMdjkU7a1XihD9PItrz.png)](https://asciinema.org/a/CVha4PPMdjkU7a1XihD9PItrz)
 
-# FAQ
-* **Why do someone need it?**
+* Download and install with single-step process.
+```./install```
 
-  Because many times, setting up proxy on Linux sucks (esp. authenticated proxies). There are a lot of locations to configure. This tool reduces your effort by setting the proper configuration at the desired place.
+Proxyman is now available in your path. 
+Open a new terminal window and start playing.
 
-* **For which softwares the settings by ProxyMan is effective?**
+* Set proxy
+```proxyman set```
 
-  ProxyMan sets proxy for `apt`, `dnf`, `bashrc`, `npm`, `git`, `dropbox`, `/etc/environment`, `gsettings`. 
+* Save your settings for later use.
+* View your saved configs
+```proxyman configs```
+* Load your previously saved config - say you saved it by the name *point4*. 
+```proxyman load point4```
 
-* **There is some application/location it does not support. Any workaround?**
+## What's new?
+* Saved configs made more organized and works flawlessly.
+* Installation script makes it available in your path. Just call the command `proxyman`, no `cd` to your downloads.
+* Lots of issues got closed.
+* Restructured codebase with better code quality than before - easier to maintain.
 
-  Why not? Everything is possible. Just raise an issue [here](https://github.com/himanshub16/ProxyMan/issues). 
-  If you are a developer, then your contributions are welcome.
 
-* **My distro works like charm. I don't need it.**
+## Why still a release candidate?
+If you find any bugs/edge-cases not taken care of :see_no_evil:, feel free to open an [issue](https://github.com/ProxyMan/issues).
+:smiley:
 
-  It's great that your distro supports everything. However, many disros do not support authenticated proxy settings. 
-  Moreover, there are several apps which don't use system proxy on certain platforms and need their own workaround.
 
-For older version, checkout [branch v1](https://github.com/himanshub16/ProxyMan/tree/v1).
-To download older versions, checkout releases tagged v1.* [here](https://github.com/himanshub16/ProxyMan/releases).
-
-#### What's new in v2?
-* Modular approach. Individual scripts handle individual targets requiring proxy settings.
-* This means, a script can be for a single application/domain can be created and easily integrated with main.sh, without much modifications in main.sh (which was not available in v1).
-* No issues of privileges for individual scripts. Main script is responsible of executing child script with required privileges.
-
- 
-NOTE : It does not support PAC proxy using "proxy configuration URL". It is for setting up "manual" proxy.
-
-#### A GUI version is under consideration. However, it is ready. If you like to contribute, you can checkout to the [gui branch](https://github.com/himanshub16/ProxyMan/tree/gui) of this project.
+### DISCLAIMER
+Please don't save your passwords on public machines. Instead use proxyman without providing password and log-in from the browser.
